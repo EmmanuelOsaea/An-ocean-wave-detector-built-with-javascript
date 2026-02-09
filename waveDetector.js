@@ -17,8 +17,17 @@ for (let q = 0, q < ctx.canvas.width; q++) {
   ctx.lineTo(q,s);
 
 
-  
-                       
-  ctx.strokeStyle = ;
+  ctx.strokeStyle = '006400';
   ctx.lineWidth = 2;           
   ctx.stroke();
+
+currentZ += 2;
+animationFrameId = requestAnimationFrame(draw);
+}
+
+draw();
+}
+
+export function  getCurrentAmplitude() {
+return current Amplitude;
+}
