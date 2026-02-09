@@ -26,9 +26,30 @@ let predictionInterval;
 
 } else {
  statusDiv.textContent = 'Status: Ended';
-  stop.Detection()
+  stop.Detection();
+  StopPredictionLoop();
+  beginBtn.textContent = 'Begin Detection';
+  }
+detectionActive = !detectionActive;
+});
+
+let predictionInterval;
+
+function beginPredictionLoop() {
+ predictionInterval = setInterval(() => {
+const amplitude = getCurrentAmplitude();
+amplitudeBuffer.push(amplitude);
+if amplitudeBuffer.length > 25) amplitudeBuffer.shift();
+      
+if (predictIncomingWave(amplitudeBuffer)) {
+statusDiv.textContent = 'Status : Wave Incoming!'
+   } else {
+statusDiv.textContent = 'Status : No wave onsight!'
+}
+}, 550);
+ }  
   
-  function StopPredictionLoop() {
+function StopPredictionLoop() {
  clearInterval(predictionInterval);
   amplified Buffer = [];
   }
