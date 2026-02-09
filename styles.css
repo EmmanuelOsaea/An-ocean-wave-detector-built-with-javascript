@@ -1,0 +1,23 @@
+body {
+  font-family: 
+  text-align: center;
+  margin: 25px;
+
+ #waveCanvas {
+ border: 1.5px solid #
+ margin: 25px auto;
+ display:
+   }
+
+#beginBtn {
+   padding: 15px 25px;
+   font-size: 20px;
+  }
+
+  #status {
+   margin-top: 15px;
+    font-weight: bold;
+     font-style:
+  }
+    
+  
