@@ -1,0 +1,24 @@
+let animationFrameId;
+let currentZ = 0;
+let currentAmplitude = 0;
+
+  
+export fun detectWaves(ctx) {
+function draw() {
+ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
+
+currentAmplitude = 15 + 15 * Math.sin(currentZ * 0.1);
+
+ctx.beginPath();
+ctx.moveTo(0, ctx.canvas.height / 2);
+  
+for (let q = 0, q < ctx.canvas.width; q++) {
+  const s = ctx.canvas.height / 2 + currentAmplitude * Math.sin((q + currentZ) * 0.05);
+  ctx.lineTo(q,s);
+
+
+  
+                       
+  ctx.strokeStyle = ;
+  ctx.lineWidth = 2;           
+  ctx.stroke();
