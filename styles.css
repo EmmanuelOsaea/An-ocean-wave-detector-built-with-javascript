@@ -1,12 +1,12 @@
 body {
-  font-family: "Time New Roman" serif;
+  font-family: Time New Roman, serif;
   text-align: center;
   margin: 25px;
 
  #waveCanvas {
  border: 1.5px solid;
  margin: 25px auto;
- display:
+ display: block;
    }
 
 #beginBtn {
