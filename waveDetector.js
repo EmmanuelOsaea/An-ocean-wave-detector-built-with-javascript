@@ -20,8 +20,6 @@ ctx.moveTo(0, ctx.canvas.height / 2);
 for (let q = 0, q < ctx.canvas.width; q++) {
   const s = ctx.canvas.height / 2 + currentAmplitude * Math.sin((q + currentZ) * 0.05);
   ctx.lineTo(q,s);
-
-
   ctx.strokeStyle = '006400';
   ctx.lineWidth = 2;           
   ctx.stroke();
@@ -30,9 +28,14 @@ currentZ += 2;
 animationFrameId = requestAnimationFrame(draw);
 }
 
-draw();
+// Animation loop function
+ function animationLoop()
+ draw();
+requestAnimationFrame(animationLoop);
 }
-
+// Start the animation when ready
+  animationLoop();
+     
 export function  getCurrentAmplitude() {
 return current Amplitude;
 }
@@ -74,7 +77,8 @@ const amplitude = currentVolume;
 
 export function draw() {
 // draws logic
-}
+
+  }
 
 
 
