@@ -68,13 +68,22 @@ request Animation Frame(analyze);
 export function  detectWaves() {
 
 const amplitude = currentVolume;
+
 }
 
 export function draw() {
+// draws logic
 }
 
 
 
+
+
+
+
+
+
+  
 
 
 
