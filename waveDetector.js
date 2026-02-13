@@ -39,4 +39,11 @@ return current Amplitude;
   export async function setupMicrophone() {
     try {
 const stream = await.navigator.mediaDevices.getUserMedia({ audio: true });
- 
+
+
+
+
+
+
+  export function draw() {
+}
