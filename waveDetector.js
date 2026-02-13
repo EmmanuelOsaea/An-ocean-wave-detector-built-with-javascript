@@ -1,6 +1,10 @@
 let animationFrameId;
 let currentZ = 0;
 let currentAmplitude = 0;
+let audioContext;
+let analyser;
+let source;
+let currentValue = 0;
 
   
 export fun detectWaves(ctx) {
@@ -31,3 +35,8 @@ draw();
 export function  getCurrentAmplitude() {
 return current Amplitude;
 }
+
+  export async function setupMicrophone() {
+    try {
+const stream = await.navigator.mediaDevices.getUserMedia({ audio: true });
+ 
