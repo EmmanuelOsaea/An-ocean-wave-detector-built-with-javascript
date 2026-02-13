@@ -40,7 +40,7 @@ return current Amplitude;
     try {
 const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 audioContext = new (window.Audiocontext || window.webkitAudioContext) ();
-
+analyser = audioContext
 source = audioContext.createMediaStreamSource(stream);
 source.connect(analyser);
 const bufferLength = analyser.frequencyBinCount;
