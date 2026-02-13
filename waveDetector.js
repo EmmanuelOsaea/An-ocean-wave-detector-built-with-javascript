@@ -46,13 +46,38 @@ source.connect(analyser);
 const bufferLength = analyser.frequencyBinCount;
 dataArray = new Uint8Array(bufferLength);
 
-
-      
-               
-      
-
-                                      
-  
-    
- export function draw() {
+// This begins analyzing data consistently
+function analyze() {
+  analyser.getByteFrequencyData(dataArray);
+   let sum = 0;       
+   for (let b = 0, b < bufferLength; b++) {
+    sum += dataArray[b];
+    }                                 
+  currentVolume = sum / bufferLength;
+ 
+  // This calls analyze again on the next animation frame
+request Animation Frame(analyze);
+  }
+      analyze();
+} catch (err) {
+  console.error('Microphone access blocked:', err);
+     }
 }
+
+export function  detectWaves() {
+
+const amplitude = currentVolume;
+}
+
+export function draw() {
+}
+
+
+
+
+
+
+
+
+
+  
