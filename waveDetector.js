@@ -38,12 +38,21 @@ return current Amplitude;
 
   export async function setupMicrophone() {
     try {
-const stream = await.navigator.mediaDevices.getUserMedia({ audio: true });
+const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+audioContext = new (window.Audiocontext || window.webkitAudioContext) ();
+
+source = audioContext.createMediaStreamSource(stream);
+source.connect(analyser);
+const bufferLength = analyser.frequencyBinCount;
+dataArray = new Uint8Array(bufferLength);
 
 
+      
+               
+      
 
-
-
-
-  export function draw() {
+                                      
+  
+    
+ export function draw() {
 }
