@@ -5,10 +5,11 @@ let audioContext;
 let analyser;
 let source;
 let currentValue = 0;
+const canvas = getElementById('waveCanvas')
+const ctx = canvas.getContext('2d') 
 
-  
 export fun detectWaves(ctx) {
-function draw() {
+export function draw() {
 ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
 
 currentAmplitude = 15 + 15 * Math.sin(currentZ * 0.1);
