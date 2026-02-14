@@ -26,8 +26,8 @@ let predictionInterval;
 
 } else {
  statusDiv.textContent = 'Status: Ended';
-  stop.Detection();
-  StopPredictionLoop();
+  end.Detection();
+  EndPredictionLoop();
   beginBtn.textContent = 'Begin Detection';
   }
 detectionActive = !detectionActive;
