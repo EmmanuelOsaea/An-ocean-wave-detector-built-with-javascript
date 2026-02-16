@@ -1,4 +1,4 @@
-import { detectWaves, stopDetection } from './waveDetector.js';
+import { detectWaves, endDetection } from './waveDetector.js';
 import { predictIncomingWave } from './predictor.js';
 
 const beginBtn = document.getElementById('beginBtn');
