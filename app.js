@@ -49,7 +49,7 @@ statusDiv.textContent = 'Status : No wave onsight!'
 }, 550);
  }  
   
-function StopPredictionLoop() {
+function EndPredictionLoop() {
  clearInterval(predictionInterval);
   amplified Buffer = [];
   }
